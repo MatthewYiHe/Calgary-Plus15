@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import pathFinder from './test.js';
 
-const AnyReactComponent = ({ marker }) => <div>{marker}</div>;
 
+
+const yourJson = require('../Plus15.geojson')
 class SimpleMap extends Component {
   constructor() {
     super();
@@ -10,13 +12,29 @@ class SimpleMap extends Component {
                   markers: [
                     {
                       name: "Current position",
-                      position: {
-                        lat: 51.05,
-                        lng: -114.06
-                      }
+                      lat: 51.05,
+                      lng: -114.06
+                    },
+                    {
+                      name: "Destination",
+                      lat: 51.04,
+                      lng: -114.05
                     }
                   ]
     };
+
+    console.log(
+      pathFinder.findPath(
+        {
+          "type": "Point",
+          "coordinates": [125.6, 10.1]
+        },
+        {
+          "type": "Point",
+          "coordinates": [125.6, 10.1]
+        }
+      )
+    )
   }
 
   static defaultProps = {
@@ -27,23 +45,29 @@ class SimpleMap extends Component {
     zoom: 15
   };
 
+  handleDragEnd = (e) => {
+    // this.setState({numberOfUsers: obj.numberOfUsers})
+    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
+
+  }
+
   renderMarkers = (map, maps) => {
-    let marker = new maps.Marker({
-      map:map,
-      draggable:true,
-      position: {lat: this.state.markers[0].position.lat, lng: this.state.markers[0].position.lng},
-      title:"Drag me!"
-    });
+    this.state.markers.map(marker => {
+      const markerObj = new maps.Marker({
+        map:map,
+        draggable:true,
+        position: {lat: marker.lat, lng: marker.lng},
+        title: marker.name
+      });
+      markerObj.addListener('dragend', this.handleDragEnd)
+    })
   }
 
   renderPolylines (map, maps) {
-    // let position = marker.getPosition()
-    // let lat = position.lat()
-    // let lng = position.lng()
     let geodesicPolyline = new maps.Polyline({
       path: [
-        {lat:51.05, lng:-114.06},
-        {lat:51.045, lng:-114.062}
+        {lat:this.state.markers[0].lat, lng:this.state.markers[0].lng},
+        {lat:this.state.markers[1].lat, lng:this.state.markers[1].lng}
       ],
       strokeColor: 'red',
       strokeOpacity: 1,
@@ -69,12 +93,6 @@ class SimpleMap extends Component {
           }}
         >
 
-
-          <AnyReactComponent
-            lat={51.044921}
-            lng={-114.064691}
-            text="My Marker"
-          />
         </GoogleMapReact>
       </div>
     );
@@ -85,3 +103,4 @@ class SimpleMap extends Component {
 
 export default SimpleMap;
 
+// dont use this key: AIzaSyDrCXoSYA0GKWtl6I8K2QZDAhe9ryNnQkE
