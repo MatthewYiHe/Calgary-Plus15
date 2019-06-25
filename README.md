@@ -1,3 +1,8 @@
+#added .default to the require in 2 files under geojason-path-finder folder in node modules: dijkstrajs and topology.js
+
+
+
+
 React Boilerplate
 =====================
 
