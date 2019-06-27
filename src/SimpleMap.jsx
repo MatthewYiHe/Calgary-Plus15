@@ -47,28 +47,16 @@ class SimpleMap extends Component {
     if (geodesicPolyline) {
       geodesicPolyline.setMap(null)
     }
-    console.log("target",name)
-    if (name === "Current position"){
-      const newPosition = [{name: "Current position",
-                            lat: e.latLng.lat(),
-                            lng: e.latLng.lng()
-                          }];
-      const newMarkers = newPosition.concat(this.state.markers.slice(1))
-      this.setState({markers: newMarkers})
-    } else if (name === "Destination"){
-      const newPosition = [{name: "Destination",
-                            lat: e.latLng.lat(),
-                            lng: e.latLng.lng()
-                          }];
-      const newMarkers = [this.state.markers[0]].concat(newPosition)
-      // console.log("Markers",newMarkers)
-      this.setState({markers: newMarkers})
-    } else {
-      console.log("-----------------------------------------------------------")
-      // alert ("oops")
+    const markers = [ ...this.state.markers ]
+    const index = markers.findIndex(mark => mark.name === name);
+    markers[index] = {
+      name,
+      lat: e.latLng.lat(),
+      lng: e.latLng.lng()
     }
+    this.setState({ markers })
     this.renderPolylines();
-    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
+    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
   }
 
   renderMarkers = (map, maps) => {
@@ -94,7 +82,6 @@ class SimpleMap extends Component {
         if (route) {
           const path = route.path
           console.log(route.weight * 1000, 'm')
-          // console.log("PATHHTHDSGD", JSON.stringify(path))
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
             strokeColor: 'red',
