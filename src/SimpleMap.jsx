@@ -5,6 +5,8 @@ import { pathFinder, nearestPoint } from './pathFinder.js';
 
 const turf = require('@turf/helpers');
 
+let geodesicPolyline;
+
 class SimpleMap extends Component {
   constructor() {
     super();
@@ -32,27 +34,32 @@ class SimpleMap extends Component {
     zoom: 16
   };
 
-
-
-
-
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
 
-
-
-
   handleDragEnd = (e) => {
-    const newPosition = [{name: "Current position",
-                          lat: e.latLng.lat(),
-                          lng: e.latLng.lng()
-                        }];
-    const newMarkers = newPosition.concat(this.state.markers.slice(1))
-    // console.log(newMarkers)
-    this.setState({markers: newMarkers})
+    if (geodesicPolyline) {
+      geodesicPolyline.setMap(null)
+    }
+    // console.log("target",event.target)
+    if (event.target.title === "Current position"){
+      const newPosition = [{name: "Current position",
+                            lat: e.latLng.lat(),
+                            lng: e.latLng.lng()
+                          }];
+      const newMarkers = newPosition.concat(this.state.markers.slice(1))
+      this.setState({markers: newMarkers})
+    } else if (event.target.title === "Destination"){
+      const newPosition = [{name: "Destination",
+                            lat: e.latLng.lat(),
+                            lng: e.latLng.lng()
+                          }];
+      const newMarkers = this.state.markers.splice(-1,1).concat(newPosition)
+      this.setState({markers: newMarkers})
+    } else {
+      alert ("oops")
+    }
     this.renderPolylines();
-
-    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
-
+    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
   }
 
   renderMarkers = (map, maps) => {
@@ -77,26 +84,24 @@ class SimpleMap extends Component {
         if (route) {
           const path = route.path
           // console.log("PATHHTHDSGD", JSON.stringify(path))
-          let geodesicPolyline = new maps.Polyline({
+            geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
             strokeColor: 'red',
             strokeOpacity: 1,
             strokeWeight: 5
           })
-          maps.clear();
           geodesicPolyline.setMap(map)
-          console.log("Route after", route)
+          // console.log("Route after", route)
         }}
   }
 
   componentDidUpdate(){
-    console.log('current state', this.state)
+    // console.log('current state', this.state)
   }
 
 
 
   render() {
-
     return (
       <div style={{ height: '80vh', width: '100%'}}>
         <GoogleMapReact
@@ -108,7 +113,6 @@ class SimpleMap extends Component {
           onGoogleApiLoaded={({map, maps}) => {
             map.data.loadGeoJson('./Plus15.geojson')
             this.renderMarkers(map, maps)
-            // this.renderPolylines(map, maps)
             this.setMapReference(map, maps)
           }}
         >
