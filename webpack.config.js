@@ -20,6 +20,10 @@ module.exports = {
         include: path.join(__dirname, 'src')
       },
       {
+        test: /\.(json|geojson)$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.scss$/,
         use: [
           'style-loader',

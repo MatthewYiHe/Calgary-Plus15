@@ -45,6 +45,15 @@
     "webpack-dev-server": "2.3.0"
   },
   "dependencies": {
+    "@turf/explode": "^5.1.5",
+    "@turf/helpers": "^6.1.4",
+    "@turf/nearest-point": "^6.0.1",
+    "@turf/polygon-to-line": "^6.0.3",
+    "@turf/turf": "^5.1.6",
+    "geojson-path-finder": "^1.5.2",
+    "google-map-react": "^1.1.4",
+    "json-loader": "^0.5.7",
+    "prop-types": "^15.7.2",
     "react": "15.4.2",
     "react-dom": "15.4.2"
   }
