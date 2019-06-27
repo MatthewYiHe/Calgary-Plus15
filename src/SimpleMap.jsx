@@ -15,14 +15,14 @@ class SimpleMap extends Component {
                     {
                       name: "Current position",
                       lat: 51.04977991674422,
-                      lng: -114.06333088874815
-                      // icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                      lng: -114.06333088874815,
+                      icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
                     },
                     {
                       name: "Destination",
                       lat: 51.04872774272838,
-                      lng: -114.06589776277542
-                      // icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+                      lng: -114.06589776277542,
+                      icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
                     }
                   ]
     };
@@ -38,25 +38,30 @@ class SimpleMap extends Component {
 
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
 
-  handleDragEnd = (e) => {
+  handleDragEnd = name => (e) => {
+    // same as:
+    // handleDragEnd (name){
+    //   return function handleDragEnd (e) {
+    //   }
+    // }
     if (geodesicPolyline) {
       geodesicPolyline.setMap(null)
     }
-    console.log("target",event.target)
-    if (event.target.title === "Current position"){
+    console.log("target",name)
+    if (name === "Current position"){
       const newPosition = [{name: "Current position",
                             lat: e.latLng.lat(),
                             lng: e.latLng.lng()
                           }];
       const newMarkers = newPosition.concat(this.state.markers.slice(1))
       this.setState({markers: newMarkers})
-    } else if (event.target.title === "Destination"){
+    } else if (name === "Destination"){
       const newPosition = [{name: "Destination",
                             lat: e.latLng.lat(),
                             lng: e.latLng.lng()
                           }];
       const newMarkers = [this.state.markers[0]].concat(newPosition)
-      console.log("Markers",newMarkers)
+      // console.log("Markers",newMarkers)
       this.setState({markers: newMarkers})
     } else {
       console.log("-----------------------------------------------------------")
@@ -72,10 +77,10 @@ class SimpleMap extends Component {
         map: map,
         draggable: true,
         position: { lat: marker.lat, lng: marker.lng },
-        title: marker.name
-        // icon: marker.icon
+        title: marker.name,
+        icon: marker.icon
       });
-      markerObj.addListener('dragend', this.handleDragEnd)
+      markerObj.addListener('dragend', this.handleDragEnd(marker.name))
     })
   }
 
@@ -100,6 +105,12 @@ class SimpleMap extends Component {
         }}
   }
 
+  // initGeocoder = (map, maps) => {
+  //   const geocoder = new maps.Geocoder();
+  //   let cooridnate = geocoder.geocode({ 'address': '150 9 Ave SW, Calgary, AB'})
+  //   console.log("Geocoder",cooridnate)
+  // };
+
   render() {
     return (
       <div style={{ height: '80vh', width: '100%'}}>
@@ -112,6 +123,7 @@ class SimpleMap extends Component {
             map.data.loadGeoJson('./Plus15.geojson')
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
+    // this.initGeocoder(map, maps)
           }}
         >
         </GoogleMapReact>
