@@ -16,11 +16,13 @@ class SimpleMap extends Component {
                       name: "Current position",
                       lat: 51.04977991674422,
                       lng: -114.06333088874815
+                      // icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
                     },
                     {
                       name: "Destination",
                       lat: 51.04872774272838,
                       lng: -114.06589776277542
+                      // icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
                     }
                   ]
     };
@@ -40,7 +42,7 @@ class SimpleMap extends Component {
     if (geodesicPolyline) {
       geodesicPolyline.setMap(null)
     }
-    // console.log("target",event.target)
+    console.log("target",event.target)
     if (event.target.title === "Current position"){
       const newPosition = [{name: "Current position",
                             lat: e.latLng.lat(),
@@ -53,13 +55,15 @@ class SimpleMap extends Component {
                             lat: e.latLng.lat(),
                             lng: e.latLng.lng()
                           }];
-      const newMarkers = this.state.markers.splice(-1,1).concat(newPosition)
+      const newMarkers = [this.state.markers[0]].concat(newPosition)
+      console.log("Markers",newMarkers)
       this.setState({markers: newMarkers})
     } else {
-      alert ("oops")
+      console.log("-----------------------------------------------------------")
+      // alert ("oops")
     }
     this.renderPolylines();
-    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
+    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
   }
 
   renderMarkers = (map, maps) => {
@@ -69,6 +73,7 @@ class SimpleMap extends Component {
         draggable: true,
         position: { lat: marker.lat, lng: marker.lng },
         title: marker.name
+        // icon: marker.icon
       });
       markerObj.addListener('dragend', this.handleDragEnd)
     })
@@ -83,6 +88,7 @@ class SimpleMap extends Component {
         )
         if (route) {
           const path = route.path
+          console.log(route.weight * 1000, 'm')
           // console.log("PATHHTHDSGD", JSON.stringify(path))
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
@@ -91,21 +97,13 @@ class SimpleMap extends Component {
             strokeWeight: 5
           })
           geodesicPolyline.setMap(map)
-          // console.log("Route after", route)
         }}
   }
-
-  componentDidUpdate(){
-    // console.log('current state', this.state)
-  }
-
-
 
   render() {
     return (
       <div style={{ height: '80vh', width: '100%'}}>
         <GoogleMapReact
-          // key={this.state.markers[0].lng}
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
@@ -116,13 +114,10 @@ class SimpleMap extends Component {
             this.setMapReference(map, maps)
           }}
         >
-
         </GoogleMapReact>
       </div>
     );
   }
 }
-
-
 
 export default SimpleMap;
