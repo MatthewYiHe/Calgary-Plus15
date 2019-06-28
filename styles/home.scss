@@ -1,3 +1,73 @@
-h1 {
-  color: tomato;
+@import url("https://fonts.googleapis.com/css?family=Hind:300,600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css");
+body {
+  color: black;
+  font-family: 'Hind', sans-serif;
+  margin: 0;
 }
+/*========================*/
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.map-div {
+  height: 100vh;
+  width: 80%
+}
+/*========================*/
+/*NAVIGATION*/
+.nav {
+  width: 20%;
+  background-color: #9fa4ad;
+  font-size: 1.5em;
+  color: #edeff2;
+}
+.plus-15 {
+  color: #67f7fc;
+  background-color: #737982;
+  font-size: 5em;
+  font-weight: bolder;
+  text-align: left;
+ /* letter-spacing: 0.1em;*/
+  padding: 25px 0 10px 25px;
+  border-bottom: 10px solid #67f7fc;
+}
+.nav-item {
+  text-align: left;
+  vertical-align: middle;
+  letter-spacing: 0.1em;
+  padding: 15px 0 15px 0;
+  border-bottom: 2px solid #edeff2;
+}
+.nav-item:hover{
+   background-color: #737982;
+}
+.material-icons.md-48 {
+  vertical-align: middle;
+  font-size: 40px;
+  color: #67f7fc;
+  width: 60px;
+  margin-left: 40px;
+}
+ /*+++++++++++++++++++++++++++*/
+ /* VIEWPORTS */
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .map-div {
+    height: 100vh;
+    width: 100%;
+    border-bottom: 4px solid #67f7fc;
+  }
+  .nav {
+    float: none;
+    width: 100%;
+  }
+  .plus-15 {
+    display: none;
+  }
+}
+/*
+1340 tablet size, do something else, everything hangs out of containers
+*/

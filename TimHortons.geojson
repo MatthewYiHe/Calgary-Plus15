@@ -1,0 +1,192 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0695819,
+          51.0445315,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0583435,
+          51.0465401,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0655303,
+          51.0482101,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0756627,
+          51.0489902,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.068079,
+          51.0493233,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0669034,
+          51.0463833,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0717166,
+          51.0428285,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0746591,
+          51.0479773,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0810385,
+          51.045918,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0712755,
+          51.0487893,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0713407,
+          51.0460369,
+          0
+        ]
+      },
+      "properties": {
+        "marker-color": "#3abe51",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "name": "Tim Hortons"
+      }
+    }
+  ]
+}
