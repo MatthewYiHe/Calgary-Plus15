@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-
 import { pathFinder, nearestPoint } from './pathFinder.js';
+// import SearchBox from './SearchBox.jsx';
+
 
 const turf = require('@turf/helpers');
 
@@ -56,7 +57,7 @@ class SimpleMap extends Component {
     }
     this.setState({ markers })
     this.renderPolylines();
-    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
+    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
   }
 
   renderMarkers = (map, maps) => {
@@ -92,25 +93,22 @@ class SimpleMap extends Component {
         }}
   }
 
-  // initGeocoder = (map, maps) => {
-  //   const geocoder = new maps.Geocoder();
-  //   let cooridnate = geocoder.geocode({ 'address': '150 9 Ave SW, Calgary, AB'})
-  //   console.log("Geocoder",cooridnate)
-  // };
-
   render() {
     return (
-      <div style={{ height: '80vh', width: '100%'}}>
+      <div className="map-div" >
         <GoogleMapReact
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
+            // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
+            (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
             map.data.loadGeoJson('./Plus15.geojson')
+            // map.data.loadGeoJson('./TimHortons.geojson')
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
-    // this.initGeocoder(map, maps)
+            // this.renderSearchBox(map, maps)
           }}
         >
         </GoogleMapReact>
