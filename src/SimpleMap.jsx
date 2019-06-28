@@ -83,7 +83,7 @@ class SimpleMap extends Component {
             strokeOpacity: 1,
             strokeWeight: 5
           })
-          maps.clear();
+
           geodesicPolyline.setMap(map)
           console.log("Route after", route)
         }}
