@@ -86,7 +86,6 @@ class SimpleMap extends Component {
           const path = route.path
           console.log(route.weight * 1000, 'm')
           let dist = route.weight * 1000;
-          distance = dis.toString();
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
             strokeColor: 'red',
