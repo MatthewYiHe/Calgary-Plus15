@@ -5,13 +5,8 @@ const turf = require('@turf/helpers');
 // import SearchBox from './SearchBox.jsx';
 
 
-function Marker({icon, lat, lng}){
-  return <div style={{
-    padding: '8px',
-    border: '1px solid black',
-    }}>
-    <div>{icon}</div>
-    </div>
+function Marker({category, lat, lng}){
+  return <img src={`/public/icons/${category}.png`} />
 }
 
 let geodesicPolyline;
@@ -57,7 +52,7 @@ class SimpleMap extends Component {
             name: place.properties.name,
             lat: place.geometry.coordinates[1],
             lng: place.geometry.coordinates[0],
-            icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+            category: category
           })
         })
       })
@@ -116,7 +111,7 @@ class SimpleMap extends Component {
           console.log(route.weight * 1000, 'm') // distance value in meters
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
-            strokeColor: 'red',
+            strokeColor: 'blue',
             strokeOpacity: 1,
             strokeWeight: 5
           })
@@ -128,8 +123,6 @@ class SimpleMap extends Component {
     return (
       <div className="map-div" >
         <GoogleMapReact
-
-
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
@@ -155,7 +148,7 @@ class SimpleMap extends Component {
               lat={place.lat}
               lng={place.lng}
               text={place.name}
-              icon={place.icon}
+              category={place.category}
             />)
         }
         </GoogleMapReact>
