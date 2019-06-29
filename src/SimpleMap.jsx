@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { pathFinder, nearestPoint } from './pathFinder.js';
-<<<<<<< HEAD
 import SearchBox from './SearchBox.jsx';
-=======
-
 import Distance from './Distance.jsx';
->>>>>>> distance
 
 
 const turf = require('@turf/helpers');
