@@ -54,7 +54,7 @@
     "google-map-react": "^1.1.4",
     "json-loader": "^0.5.7",
     "prop-types": "^15.7.2",
-    "react": "15.4.2",
-    "react-dom": "15.4.2"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

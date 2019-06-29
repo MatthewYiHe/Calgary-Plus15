@@ -1,0 +1,481 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0756881,
+          51.0457762,
+          0
+        ]
+      },
+      "properties": {
+        "name": "BMO Bank of Montreal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0704033,
+          51.044509,
+          0
+        ]
+      },
+      "properties": {
+        "name": "BMO Bank of Montreal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0658998,
+          51.0489534,
+          0
+        ]
+      },
+      "properties": {
+        "name": "BMO Bank of Montreal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0696677,
+          51.0469238,
+          0
+        ]
+      },
+      "properties": {
+        "name": "BMO Bank of Montreal Main Branch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0611942,
+          51.0488597,
+          0
+        ]
+      },
+      "properties": {
+        "name": "BMO Bank of Montreal ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0706425,
+          51.0463774,
+          0
+        ]
+      },
+      "properties": {
+        "name": "TD Canada Trust"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0720215,
+          51.046236,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Matthew Desmarais - TD Financial Planner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0689977,
+          51.0465856,
+          0
+        ]
+      },
+      "properties": {
+        "name": "TD ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0699125,
+          51.048776,
+          0
+        ]
+      },
+      "properties": {
+        "name": "TD Canada Trust Branch and ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0630719,
+          51.049641,
+          0
+        ]
+      },
+      "properties": {
+        "name": "TD Canada Trust Branch and ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0706592,
+          51.0464065,
+          0
+        ]
+      },
+      "properties": {
+        "name": "TD Convenience Center"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0785547,
+          51.0461533,
+          0
+        ]
+      },
+      "properties": {
+        "name": "RBC Royal Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0773909,
+          51.045705,
+          0
+        ]
+      },
+      "properties": {
+        "name": "RBC Royal Bank ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0702702,
+          51.0456188,
+          0
+        ]
+      },
+      "properties": {
+        "name": "RBC Royal Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.066994,
+          51.0458143,
+          0
+        ]
+      },
+      "properties": {
+        "name": "RBC Royal Bank ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0675335,
+          51.0483241,
+          0
+        ]
+      },
+      "properties": {
+        "name": "RBC Royal Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0562319,
+          51.0476935,
+          0
+        ]
+      },
+      "properties": {
+        "name": "RBC Royal Bank ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0789363,
+          51.0476075,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ATB Financial"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0667501,
+          51.0491839,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ATB Financial"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0634006,
+          51.0457801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ATB Financial"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.072389,
+          51.045281,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ATB Wealth Private Banking Centre - Calgary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0734089,
+          51.0454534,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ATB Financial Eighth Avenue Place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0709068,
+          51.0469834,
+          0
+        ]
+      },
+      "properties": {
+        "name": "ATB Financial Barclay Centre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0655886,
+          51.0467449,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Scotiabank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0784451,
+          51.0471087,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Scotiabank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0709254,
+          51.0456172,
+          0
+        ]
+      },
+      "properties": {
+        "name": "HSBC Bank"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0659164,
+          51.0476423,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Branch with ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0706498,
+          51.0510412,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Branch (Cash at ATM only)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0618277,
+          51.0480293,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Branch (Cash at ATM only)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.068572,
+          51.045411,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Branch with ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0681464,
+          51.0452691,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC World Markets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.074145,
+          51.045744,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Wood Gundy Branch Calgary"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.068572,
+          51.045411,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Branch with ATM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.068572,
+          51.045411,
+          0
+        ]
+      },
+      "properties": {
+        "name": "CIBC Branch with ATM"
+      }
+    }
+  ]
+}

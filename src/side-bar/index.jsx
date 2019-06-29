@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles.scss'
 
 function toggleSelectedCategory(category, selectedCategories, setSelectedCategories) {
   const on = selectedCategories.find(selectedCategory => selectedCategory === category)
@@ -17,7 +18,7 @@ export default function SideBar({
   return(
     <nav className="nav">
       <div className="plus-15">+15</div>
-      <ul>
+      <ul className="side-bar">
       {
         categories.map(category => <li>
           <button

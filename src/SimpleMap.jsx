@@ -4,13 +4,21 @@ import { pathFinder, nearestPoint } from './pathFinder.js';
 // import SearchBox from './SearchBox.jsx';
 
 
+function Marker({text, lat, lng}){
+  return <div style={{
+    padding: '8px',
+    border: '1px solid black'}}>
+    <div>{text}</div>
+    </div>
+}
+
 const turf = require('@turf/helpers');
 
 let geodesicPolyline;
 
 class SimpleMap extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
                   markers: [
                     {
@@ -25,8 +33,36 @@ class SimpleMap extends Component {
                       lng: -114.06589776277542,
                       icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
                     }
-                  ]
+                  ],
+                  places: []
     };
+
+
+  }
+
+  componentWillReceiveProps = (props) => {
+    console.log('selectedCategories', props.selectedCategories)
+    this.loadSelectedPlaces(props.selectedCategories)
+  }
+
+  componentWillMount()  {
+    this.loadSelectedPlaces(this.props.selectedCategories)
+  }
+
+  loadSelectedPlaces = (categories) => {
+    this.setState({
+      places: categories.flatMap(category => {
+        const json = require(`./data/${category}.json`)
+        return json.features.map(place => {
+          return ({
+            name: place.properties.name,
+            lat: place.geometry.coordinates[1],
+            lng: place.geometry.coordinates[0],
+            //icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+          })
+        })
+      })
+    })
   }
 
   static defaultProps = {
@@ -73,6 +109,7 @@ class SimpleMap extends Component {
     })
   }
 
+
   renderPolylines = () => {
     const { map, maps } = this.state;
       if (map && maps) {
@@ -82,7 +119,7 @@ class SimpleMap extends Component {
         )
         if (route) {
           const path = route.path
-          console.log(route.weight * 1000, 'm')
+          console.log(route.weight * 1000, 'm') // distance value in meters
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
             strokeColor: 'red',
@@ -97,20 +134,27 @@ class SimpleMap extends Component {
     return (
       <div className="map-div" >
         <GoogleMapReact
+
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
-            // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
-            (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
             map.data.loadGeoJson('./Plus15.geojson')
-            // map.data.loadGeoJson('./TimHortons.geojson')
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
-            // this.renderSearchBox(map, maps)
           }}
         >
+         {
+          this.state.places.map((place, i) => <Marker
+              id={place.name}
+              key={i}
+              lat={place.lat}
+              lng={place.lng}
+              text={place.name}
+              icon={place.icon}
+            />)
+        }
         </GoogleMapReact>
       </div>
     );

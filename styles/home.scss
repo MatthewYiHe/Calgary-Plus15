@@ -39,6 +39,7 @@ body {
   padding: 15px 0 15px 0;
   border-bottom: 2px solid #edeff2;
 }
+
 .nav-item:hover{
    background-color: #737982;
 }
@@ -73,57 +74,4 @@ body {
 1340 tablet size, do something else, everything hangs out of containers
 */
 
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  margin-right: 20;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: lightgray;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #67f7fc;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
 

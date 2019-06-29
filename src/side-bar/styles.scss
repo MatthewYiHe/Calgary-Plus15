@@ -1,0 +1,17 @@
+ul.side-bar {
+  margin: 0;
+  padding: 0px;
+  list-style-type: none;
+}
+
+ul.side-bar li {
+  display: block;
+  width: 100%;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 0px;
+}
+
+ul.side-bar li button {
+  width: 100%;
+}

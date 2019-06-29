@@ -1,0 +1,229 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.069248,
+          51.0444193,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Second Cup Coffee Co."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0709288,
+          51.0461119,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Second Cup Coffee Co."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0656103,
+          51.049053,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Second Cup Coffee Co. featuring Pinkberry Frozen Yogurt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0599231,
+          51.0489181,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0618277,
+          51.0480293,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0690889,
+          51.0472742,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0690537,
+          51.0463287,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0734547,
+          51.0454613,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Starbucks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0613917,
+          51.0479234,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0712755,
+          51.0487893,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0756627,
+          51.0489902,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0583435,
+          51.0465401,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0671732,
+          51.0490673,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monogram Coffee"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0657965,
+          51.0482314,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Analog Coffee"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0634006,
+          51.0457801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Phil & Sebastian Coffee Roasters - Stephen Avenue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.061195,
+          51.045576,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Rosso Coffee Roasters - Stephen Ave"
+      }
+    }
+  ]
+}
