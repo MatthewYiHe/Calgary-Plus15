@@ -8,6 +8,7 @@ const turf = require('@turf/helpers');
 
 let geodesicPolyline;
 let pointOfInterests = [];
+let distance;
 
 class SimpleMap extends Component {
   constructor() {
@@ -40,12 +41,12 @@ class SimpleMap extends Component {
 
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
 
+  // same as:
+  // handleDragEnd (name){
+  //   return function handleDragEnd (e) {
+  //   }
+  // }
   handleDragEnd = name => (e) => {
-    // same as:
-    // handleDragEnd (name){
-    //   return function handleDragEnd (e) {
-    //   }
-    // }
     if (geodesicPolyline) {
       geodesicPolyline.setMap(null)
     }
@@ -84,6 +85,8 @@ class SimpleMap extends Component {
         if (route) {
           const path = route.path
           console.log(route.weight * 1000, 'm')
+          let dist = route.weight * 1000;
+          distance = dis.toString();
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
             strokeColor: 'red',
@@ -155,5 +158,7 @@ class SimpleMap extends Component {
     );
   }
 }
+
+
 
 export default SimpleMap;

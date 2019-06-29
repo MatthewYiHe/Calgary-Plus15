@@ -8,13 +8,12 @@ export default class SearchBox extends React.Component {
   //   placeholder: React.PropTypes.string,
   //   onPlacesChanged: React.PropTypes.func
   // }
-
-
   render() {
     return(
-    <div>
-      <input className="searchbox" ref="input" {...this.rest} type="text" placeholder={"Search " + {faSearch} + " Here"} />
-    </div>
+        <div className="searchContainer">
+          <FontAwesomeIcon icon={faSearch} style={{"color":"grey","margin":"6px auto auto 10px","position":"absolute"}} />
+          <input className="searchbox" ref="input" {...this.rest} type="text" placeholder="Search here" />
+        </div>
       )
     }
   onPlacesChanged = () => {
@@ -24,7 +23,6 @@ export default class SearchBox extends React.Component {
   }
   componentDidMount() {
     var input = ReactDOM.findDOMNode(this.refs.input);
-    console.log("search box", input)
     this.searchBox = new google.maps.places.SearchBox(input);
     this.searchBox.addListener('places_changed', this.onPlacesChanged);
   }
