@@ -49,6 +49,16 @@ body {
   width: 60px;
   margin-left: 40px;
 }
+.searchbox{
+  font-size: 15px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 30%;
+  margin-left: 35%;
+}
+ .searchbox:focus {
+  border-color: white;
+}
  /*+++++++++++++++++++++++++++*/
  /* VIEWPORTS */
 @media only screen and (max-width: 600px) {
