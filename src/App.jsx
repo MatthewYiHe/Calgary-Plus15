@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SimpleMap from './SimpleMap.jsx';
 import SideBar from './side-bar/index.jsx';
 
-const categories = ['banks', 'coffee']
+const categories = ['banks', 'coffee', 'food']
 
 export default function App() {
   const [selectedCategories, setSelectedCategories] = useState([])

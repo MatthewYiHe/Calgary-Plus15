@@ -14,35 +14,6 @@ body {
   height: 100vh;
   width: 80%
 }
-/*========================*/
-/*NAVIGATION*/
-.nav {
-  width: 20%;
-  background-color: #9fa4ad;
-  font-size: 1.5em;
-  color: #edeff2;
-}
-.plus-15 {
-  color: #67f7fc;
-  background-color: #737982;
-  font-size: 5em;
-  font-weight: bolder;
-  text-align: left;
- /* letter-spacing: 0.1em;*/
-  padding: 25px 0 10px 25px;
-  border-bottom: 10px solid #67f7fc;
-}
-.nav-item {
-  text-align: left;
-  vertical-align: middle;
-  letter-spacing: 0.1em;
-  padding: 15px 0 15px 0;
-  border-bottom: 2px solid #edeff2;
-}
-
-.nav-item:hover{
-   background-color: #737982;
-}
 
 .material-icons.md-48 {
   vertical-align: middle;

@@ -18,14 +18,14 @@ export default function SideBar({
   return(
     <nav className="nav">
       <div className="plus-15">+15</div>
-      <ul className="side-bar">
+      <ul className="nav-item">
       {
         categories.map(category => <li>
-          <button
+          <button className="nav-button"
             onClick={() => toggleSelectedCategory(category, selectedCategories, setSelectedCategories)}
             style={{
               backgroundColor: selectedCategories.find(selectedCategory =>  selectedCategory === category)
-                ? '#fff' : '#737982'
+                ? '#737982' : '#9fa4ad'
             }}
           >{ category }</button>
         </li>)

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { pathFinder, nearestPoint } from './pathFinder.js';
+const turf = require('@turf/helpers');
 // import SearchBox from './SearchBox.jsx';
 
 
-function Marker({text, lat, lng}){
+function Marker({icon, lat, lng}){
   return <div style={{
     padding: '8px',
-    border: '1px solid black'}}>
-    <div>{text}</div>
+    border: '1px solid black',
+    }}>
+    <div>{icon}</div>
     </div>
 }
-
-const turf = require('@turf/helpers');
 
 let geodesicPolyline;
 
@@ -37,7 +37,6 @@ class SimpleMap extends Component {
                   places: []
     };
 
-
   }
 
   componentWillReceiveProps = (props) => {
@@ -58,7 +57,7 @@ class SimpleMap extends Component {
             name: place.properties.name,
             lat: place.geometry.coordinates[1],
             lng: place.geometry.coordinates[0],
-            //icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+            icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
           })
         })
       })
@@ -76,11 +75,6 @@ class SimpleMap extends Component {
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
 
   handleDragEnd = name => (e) => {
-    // same as:
-    // handleDragEnd (name){
-    //   return function handleDragEnd (e) {
-    //   }
-    // }
     if (geodesicPolyline) {
       geodesicPolyline.setMap(null)
     }
@@ -135,12 +129,21 @@ class SimpleMap extends Component {
       <div className="map-div" >
         <GoogleMapReact
 
+
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
             map.data.loadGeoJson('./Plus15.geojson')
+            map.data.setStyle({
+              fillColor: '#2254a3',
+              fillOpacity: 0.5,
+              strokeWeight: 1,
+              strokeColor: '#2254a3',
+              strokeOpacity: 0.5
+            })
+
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
           }}
