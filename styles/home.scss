@@ -49,6 +49,7 @@ body {
   width: 60px;
   margin-left: 40px;
 }
+
  /*+++++++++++++++++++++++++++*/
  /* VIEWPORTS */
 @media only screen and (max-width: 600px) {
@@ -71,3 +72,8 @@ body {
 /*
 1340 tablet size, do something else, everything hangs out of containers
 */
+.distance {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
