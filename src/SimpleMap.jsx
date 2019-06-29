@@ -143,12 +143,11 @@ class SimpleMap extends Component {
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
-            (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
+            // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
             // (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
-            // map.data.loadGeoJson('./Plus15.geojson')
+            map.data.loadGeoJson('./Plus15.geojson')
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
-            // this.maps = maps
           }}
         >
         </GoogleMapReact>
