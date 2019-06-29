@@ -72,6 +72,11 @@ body {
 .searchContainer .searchbox:focus {
   outline: -webkit-focus-ring-color auto 5px;
 }
+.distance {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
  /*+++++++++++++++++++++++++++*/
  /* VIEWPORTS */
 @media only screen and (max-width: 600px) {

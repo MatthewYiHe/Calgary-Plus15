@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { pathFinder, nearestPoint } from './pathFinder.js';
+<<<<<<< HEAD
 import SearchBox from './SearchBox.jsx';
+=======
+
+import Distance from './Distance.jsx';
+>>>>>>> distance
 
 
 const turf = require('@turf/helpers');
@@ -59,7 +64,7 @@ class SimpleMap extends Component {
     }
     this.setState({ markers })
     this.renderPolylines();
-    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
+    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
   }
 
   renderMarkers = (map, maps) => {
@@ -84,8 +89,8 @@ class SimpleMap extends Component {
         )
         if (route) {
           const path = route.path
-          console.log(route.weight * 1000, 'm')
-          let dist = route.weight * 1000;
+          let distance = Math.floor(route.weight * 1000)
+          this.setState({ distance: distance})
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
             strokeColor: 'red',
@@ -153,6 +158,7 @@ class SimpleMap extends Component {
           }}
         >
         </GoogleMapReact>
+        <Distance distance={this.state.distance} />
       </div>
     );
   }
