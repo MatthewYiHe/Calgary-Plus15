@@ -5,9 +5,7 @@ function toggleSelectedCategory(category, selectedCategories, setSelectedCategor
   const on = selectedCategories.find(selectedCategory => selectedCategory === category)
 
   setSelectedCategories(prevState => {
-    return  on
-      ? prevState.filter(selectedCategory => selectedCategory !== category)
-      : [...prevState, category]
+    return  on ? prevState.filter(selectedCategory => selectedCategory !== category) : [...prevState, category]
   })
 }
 

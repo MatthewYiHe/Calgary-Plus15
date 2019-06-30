@@ -7,12 +7,12 @@
   list-style-type: none;
 }
 
-.nav-item li button:focus{
-outline:0px;
+.nav-item li button:focus {
+outline: 0px;
 }
 
 .nav-item li {
-  border-bottom: 4px solid #67f7fc
+  border-bottom: 2px solid #67f7fc
 }
 
 .nav-item li button {
@@ -36,15 +36,12 @@ outline:0px;
   background-color: #737982;
   font-size: 5em;
   font-weight: bolder;
-  text-align: left;
-  padding: 25px 0 10px 25px;
+  text-align: center;
+  padding: 25px 0px 15px 0px;
   border-bottom: 10px solid #67f7fc;
 }
 
-.material-icons.md-48 {
-  vertical-align: middle;
-  font-size: 40px;
-  color: #67f7fc;
-  width: 60px;
-  margin-left: 40px;
+.icon {
+  width: 24px;
+  height: 24px;
 }

@@ -6,7 +6,7 @@ const turf = require('@turf/helpers');
 
 
 function Marker({category, lat, lng}){
-  return <img src={`/public/icons/${category}.png`} />
+  return <img className="icon" src={`/public/icons/${category}.png`} />
 }
 
 let geodesicPolyline;
