@@ -17,16 +17,16 @@ class SimpleMap extends Component {
     this.state = {
                   markers: [
                     {
-                      name: "Current position",
+                      name: "Me!",
                       lat: 51.04496400154897,
                       lng: -114.06487584114075,
-                      icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                      icon: "./image/markerred.png"
                     },
                     {
-                      name: "Destination",
+                      name: "Future ME!!",
                       lat: 51.04496400154897,
                       lng: -114.06389776277542,
-                      icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+                      icon: "./image/markergreen.png"
                     }
                   ]
     };
@@ -146,9 +146,9 @@ class SimpleMap extends Component {
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
-            // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
+            (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
             // (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
-            map.data.loadGeoJson('./Plus15.geojson')
+            // map.data.loadGeoJson('./Plus15.geojson')
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
           }}

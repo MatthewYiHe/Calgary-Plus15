@@ -12,7 +12,7 @@ export default class SearchBox extends React.Component {
     return(
         <div className="searchContainer">
           <FontAwesomeIcon icon={faSearch} style={{"color":"grey","margin":"6px auto auto 10px","position":"absolute"}} />
-          <input className="searchbox" ref="input" {...this.rest} type="text" placeholder="Search here" />
+          <input className="searchbox" ref="input" {...this.rest} type="text" placeholder=" Search here" />
         </div>
       )
     }

@@ -7,7 +7,7 @@ class Distance extends Component {
       <div>
         {distance && (
           <div className="distance">
-            Distance: {distance}m<br/>
+            Distance: {distance}m &emsp;
             Time: {Math.round(distance/1000 * 12.5)}mins
           </div>
           )}
