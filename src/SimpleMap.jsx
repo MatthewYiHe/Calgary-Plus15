@@ -78,6 +78,8 @@ class SimpleMap extends Component {
 
   renderPolylines = () => {
     const { map, maps } = this.state;
+    //set distance to 0, so Distance component will have distance as a false value if there no route
+    this.setState({ distance: 0})
       if (map && maps) {
         const route = pathFinder.findPath(
         nearestPoint(turf.point([this.state.markers[0].lng, this.state.markers[0].lat])),
