@@ -68,7 +68,7 @@ class SimpleMap extends Component {
       lat: 51.04772950425881,
       lng: -114.06795769929886
     },
-    zoom: 15
+    zoom: 16
   };
 
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
