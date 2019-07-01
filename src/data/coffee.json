@@ -6,16 +6,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0695819,
-          51.0445315,
+          -114.069248,
+          51.0444193,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Second Cup Coffee Co."
       }
     },
     {
@@ -23,16 +20,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0583435,
-          51.0465401,
+          -114.0709288,
+          51.0461119,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Second Cup Coffee Co."
       }
     },
     {
@@ -40,16 +34,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0655303,
-          51.0482101,
+          -114.0656103,
+          51.049053,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Second Cup Coffee Co. featuring Pinkberry Frozen Yogurt"
       }
     },
     {
@@ -57,16 +48,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0756627,
-          51.0489902,
+          -114.0599231,
+          51.0489181,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Starbucks"
       }
     },
     {
@@ -74,16 +62,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.068079,
-          51.0493233,
+          -114.0618277,
+          51.0480293,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Starbucks"
       }
     },
     {
@@ -91,16 +76,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0669034,
-          51.0463833,
+          -114.0690889,
+          51.0472742,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Starbucks"
       }
     },
     {
@@ -108,16 +90,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0717166,
-          51.0428285,
+          -114.0690537,
+          51.0463287,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Starbucks"
       }
     },
     {
@@ -125,16 +104,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0746591,
-          51.0479773,
+          -114.0734547,
+          51.0454613,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
-        "name": "Tim Hortons"
+        "name": "Starbucks"
       }
     },
     {
@@ -142,15 +118,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0810385,
-          51.045918,
+          -114.0613917,
+          51.0479234,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "name": "Tim Hortons"
       }
     },
@@ -165,9 +138,6 @@
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "name": "Tim Hortons"
       }
     },
@@ -176,16 +146,83 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.0713407,
-          51.0460369,
+          -114.0756627,
+          51.0489902,
           0
         ]
       },
       "properties": {
-        "marker-color": "#3abe51",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0583435,
+          51.0465401,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Tim Hortons"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0671732,
+          51.0490673,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Monogram Coffee"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0657965,
+          51.0482314,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Analog Coffee"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0634006,
+          51.0457801,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Phil & Sebastian Coffee Roasters - Stephen Avenue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.061195,
+          51.045576,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Rosso Coffee Roasters - Stephen Ave"
       }
     }
   ]

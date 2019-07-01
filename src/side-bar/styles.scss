@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:300,600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css");
+
+.button-icon {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-right:20px;
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.nav-item li button:focus {
+outline: 0px;
+}
+
+.nav-item li {
+  border-bottom: 2px solid #67f7fc
+}
+
+.nav-item li button {
+  color: white;
+  vertical-align: middle;
+  letter-spacing: 0.1em;
+  padding: 10px 0 10px 0;
+  border: none;
+  width: 100%;
+}
+
+.nav {
+  width: 20%;
+  background-color: #9fa4ad;
+  font-size: 1.5em;
+  color: #edeff2;
+}
+
+.plus-15 {
+  color: #67f7fc;
+  background-color: #737982;
+  font-size: 5em;
+  font-weight: bolder;
+  text-align: center;
+  padding: 25px 0px 15px 0px;
+  border-bottom: 10px solid #67f7fc;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

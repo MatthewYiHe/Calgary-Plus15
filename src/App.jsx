@@ -1,17 +1,24 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import SimpleMap from './SimpleMap.jsx';
-import SideBar from './SideBar.jsx';
+import SideBar from './side-bar/index.jsx';
 
-class App extends Component {
-  render() {
-    return (
-      <section>
-      <div className="container">
-      <SimpleMap />
-      <SideBar />
-      </div>
-      </section>
-    );
-  }
+const categories = ['banks', 'coffee', 'food']
+
+export default function App() {
+  const [selectedCategories, setSelectedCategories] = useState([])
+  return (
+    <section>
+    <div className="container">
+      <SimpleMap
+        categories={categories}
+        selectedCategories={selectedCategories}
+      />
+      <SideBar
+        categories={categories}
+        selectedCategories={selectedCategories}
+        setSelectedCategories={setSelectedCategories}
+      />
+    </div>
+    </section>
+  );
 }
-export default App;

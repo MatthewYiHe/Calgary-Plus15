@@ -4,16 +4,20 @@ import { pathFinder, nearestPoint } from './pathFinder.js';
 import SearchBox from './SearchBox.jsx';
 import Distance from './Distance.jsx';
 
-
 const turf = require('@turf/helpers');
+
+
+function Marker({category, lat, lng}){
+  return <img className="icon" src={`/public/icons/${category}.png`} />
+}
 
 let geodesicPolyline;
 let pointOfInterests = [];
 let distance;
 
 class SimpleMap extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
                   markers: [
                     {
@@ -28,8 +32,35 @@ class SimpleMap extends Component {
                       lng: -114.06389776277542,
                       icon: "./image/markergreen.png"
                     }
-                  ]
+                  ],
+                  places: []
     };
+
+  }
+
+  componentWillReceiveProps = (props) => {
+    console.log('selectedCategories', props.selectedCategories)
+    this.loadSelectedPlaces(props.selectedCategories)
+  }
+
+  componentWillMount()  {
+    this.loadSelectedPlaces(this.props.selectedCategories)
+  }
+
+  loadSelectedPlaces = (categories) => {
+    this.setState({
+      places: categories.flatMap(category => {
+        const json = require(`./data/${category}.json`)
+        return json.features.map(place => {
+          return ({
+            name: place.properties.name,
+            lat: place.geometry.coordinates[1],
+            lng: place.geometry.coordinates[0],
+            category: category
+          })
+        })
+      })
+    })
   }
 
   static defaultProps = {
@@ -76,6 +107,7 @@ class SimpleMap extends Component {
     })
   }
 
+
   renderPolylines = () => {
     const { map, maps } = this.state;
     //set distance to 0, so Distance component will have distance as a false value if there no route
@@ -91,7 +123,7 @@ class SimpleMap extends Component {
           this.setState({ distance: distance})
             geodesicPolyline = new maps.Polyline({
             path: path.map(latlng => ({ lat: latlng[1], lng: latlng[0] })),
-            strokeColor: 'red',
+            strokeColor: 'blue',
             strokeOpacity: 1,
             strokeWeight: 5
           })
@@ -148,13 +180,32 @@ class SimpleMap extends Component {
           defaultZoom={this.props.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
-            (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
+            // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
             // (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
             // map.data.loadGeoJson('./Plus15.geojson')
+
+            map.data.loadGeoJson('./Plus15.geojson')
+            map.data.setStyle({
+              fillColor: '#2254a3',
+              fillOpacity: 0.5,
+              strokeWeight: 1,
+              strokeColor: '#2254a3',
+              strokeOpacity: 0.5
+            })
             this.renderMarkers(map, maps)
             this.setMapReference(map, maps)
           }}
         >
+         {
+          this.state.places.map((place, i) => <Marker
+              id={place.name}
+              key={i}
+              lat={place.lat}
+              lng={place.lng}
+              text={place.name}
+              category={place.category}
+            />)
+        }
         </GoogleMapReact>
         <Distance distance={this.state.distance} />
       </div>

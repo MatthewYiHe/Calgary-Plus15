@@ -1,0 +1,551 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0711458,
+          51.049015,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Freshii"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0667568,
+          51.0491827,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Freshii fifth avenue place"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0735346,
+          51.0455993,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Freshii"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.069248,
+          51.0444193,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wendy's"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0644613,
+          51.047918,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Wendy's"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.074344,
+          51.048547,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.070803,
+          51.046367,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06712,
+          51.046415,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0671603,
+          51.0496945,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0668721,
+          51.048238,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0722462,
+          51.0507144,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0780331,
+          51.0471098,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0780948,
+          51.0472453,
+          0
+        ]
+      },
+      "properties": {
+        "name": "A&W Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0772639,
+          51.0456766,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Terrace Court Cafe"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0667235,
+          51.0459731,
+          0
+        ]
+      },
+      "properties": {
+        "name": "McDonald's"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0688468,
+          51.0451991,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sunterra Market, Bankers Hall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0708841,
+          51.0444589,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sunterra Petit Marche"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0646385,
+          51.048973,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Sunterra Market, TC Energy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0641098,
+          51.0480271,
+          0
+        ]
+      },
+      "properties": {
+        "name": "OPA! of Greece Suncor Energy Centre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0690141,
+          51.0453131,
+          0
+        ]
+      },
+      "properties": {
+        "name": "OPA! of Greece Bankers Hall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0729763,
+          51.0511191,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Thai Express"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0668863,
+          51.0499847,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Thai Express"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0707134,
+          51.0459981,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Thai Express"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0709288,
+          51.0461119,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Taco Bell"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0656424,
+          51.0482526,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Taco Time"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0721365,
+          51.0508854,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Subway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0704628,
+          51.0477747,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Subway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0711176,
+          51.0459757,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Subway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0709842,
+          51.0455482,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Subway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0668749,
+          51.0490158,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Subway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0783388,
+          51.0462196,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Subway"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0709418,
+          51.0461134,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Bento Sushi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.069976,
+          51.0491613,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Kabuku Downtown"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0760172,
+          51.0481766,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Chinese Village Restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0631559,
+          51.0499829,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Guilin Noodles 桂林米粉"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0674208,
+          51.0477832,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Butcher and the Baker"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0697111,
+          51.045876,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Dirtbelly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0694756,
+          51.0455821,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Earls Kitchen + Bar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.0638655,
+          51.0479372,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Jelly Modern Doughnuts"
+      }
+    }
+  ]
+}
