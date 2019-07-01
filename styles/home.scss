@@ -70,7 +70,7 @@ body {
   }
 
   .nav-item li {
-    border-bottom: 1px solid #67f7fc
+    border-bottom: 1px solid white
   }
 
   .nav-item li button {
@@ -83,13 +83,13 @@ body {
   }
 
   .plus-15 {
-    color: #67f7fc;
-    background-color: #737982;
+/*    color: #67f7fc;
+    background-color: 064466;*/
     font-size: 4em;
     font-weight: bolder;
     text-align: center;
     padding: 15px 0px 8px 0px;
-    border-bottom: 5px solid #67f7fc;
+    border-bottom: 5px solid white;
   }
 
   .icon {
@@ -107,7 +107,7 @@ body {
   .map-div {
     height: 100vh;
     width: 100%;
-    border-bottom: 4px solid #67f7fc;
+    border-bottom: 4px solid white;
   }
 
   .nav {

@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,600&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css");
 
+/*
+lightblue: #396985
+darkblue: #064466
+*/
+
+
+
+
 .button-icon {
   vertical-align: middle;
   width: 40px;
   height: 40px;
-  margin-right:20px;
+  margin:auto;
+  margin-bottom: 10px
 }
 
 .nav-item {
@@ -19,7 +28,7 @@ outline: 0px;
 }
 
 .nav-item li {
-  border-bottom: 2px solid #67f7fc
+  border-bottom: 2px solid white
 }
 
 .nav-item li button {
@@ -33,22 +42,25 @@ outline: 0px;
 
 .nav {
   width: 20%;
-  background-color: #9fa4ad;
-  font-size: 1.5em;
+  background-color: #396985;
+  font-size: 2em;
   color: #edeff2;
-}
-
-.plus-15 {
-  color: #67f7fc;
-  background-color: #737982;
-  font-size: 5em;
-  font-weight: bolder;
-  text-align: center;
-  padding: 25px 0px 15px 0px;
-  border-bottom: 10px solid #67f7fc;
 }
 
 .icon {
   width: 24px;
   height: 24px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.plus-15 {
+  background-color: #064466;
+  padding: 25px 0px 15px 0px;
+  border-bottom: 10px solid white;
 }
