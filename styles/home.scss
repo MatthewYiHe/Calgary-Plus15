@@ -27,7 +27,6 @@ body {
   z-index: 1;
   border-radius: 3px;
   border: 1px solid #868585;
-  box-shadow: 0px 1.5px 1.5px 1.5px #a09d9dbf;
 }
 .searchbox{
   font-size: 18px;
@@ -53,6 +52,22 @@ body {
   text-align: center;
   opacity: 0.7;
 }
+.popuptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+}
+.popup:hover span{
+  visibility: visible;
+}
+
  /*+++++++++++++++++++++++++++*/
  /* VIEWPORTS */
 
@@ -93,9 +108,13 @@ body {
   }
 
   .icon {
-  width: 18px;
-  height: 18px;
-}
+    width: 18px;
+    height: 18px;
+  }
+
+  .distance {
+    width: 85%;
+  }
 }
 
 /*mobile*/
@@ -117,6 +136,14 @@ body {
 
   .plus-15 {
     display: none;
+  }
+
+  .searchContainer {
+    left: calc(50% - 20%);
+  }
+
+  .distance {
+    width: 100%;
   }
 }
 

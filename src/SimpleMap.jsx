@@ -6,10 +6,21 @@ import Distance from './Distance.jsx';
 
 const turf = require('@turf/helpers');
 
-
-function Marker({category, lat, lng}){
-  return <img className="icon" src={`/public/icons/${category}.png`} />
+// <img className="icon" src={`/public/icons/${category}.png`} onClick={() => alert (text)}/>
+function Marker({category, lat, lng, text}){
+  return (<div className="popup" >
+            <img className="icon"
+                 src={`/public/icons/${category}.png`}
+                 />
+            <span className="popuptext">{text}</span>
+          </div>)
 }
+// onClick={() => alert (text)}
+// function myFunction() {
+//   var popup = document.getElementById("myPopup");
+//   console.log(popup)
+//   // popup.classList.toggle("show");
+// }
 
 let geodesicPolyline;
 let pointOfInterests = [];
@@ -50,7 +61,7 @@ class SimpleMap extends Component {
   loadSelectedPlaces = (categories) => {
     this.setState({
       places: categories.flatMap(category => {
-        const json = require(`./data/${category}.json`)
+        const json = require(`./data/${category}.geojson`)
         return json.features.map(place => {
           return ({
             name: place.properties.name,
@@ -182,8 +193,6 @@ class SimpleMap extends Component {
           onGoogleApiLoaded={({map, maps}) => {
             // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
             // (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
-            // map.data.loadGeoJson('./Plus15.geojson')
-
             map.data.loadGeoJson('./Plus15.geojson')
             map.data.setStyle({
               fillColor: '#2254a3',
