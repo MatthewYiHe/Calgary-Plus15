@@ -26,10 +26,6 @@ export default function SideBar({
         </li>)
       }
       </ul>
-      <div className="contact">
-      things we missed? contact us at: <br/>
-      +15@gmail.com
-      </div>
 
 
     </nav>

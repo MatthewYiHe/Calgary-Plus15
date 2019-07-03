@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class Distance extends Component {
   render(){
     let distance = this.props.distance
+    console.log("distance",distance)
     return (
-      <div>
+      <div className="test">
         {distance && (
           <div className="distance">
             Distance: {distance}m &emsp;
