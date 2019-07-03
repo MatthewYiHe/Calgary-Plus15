@@ -73,14 +73,6 @@ class SimpleMap extends Component {
     })
   }
 
-  // static defaultProps = {
-  //   center: {
-  //     lat: 51.04772950425881,
-  //     lng: -114.06795769929886
-  //   },
-  //   zoom: 16
-  // };
-
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
 
   // same as:
@@ -105,6 +97,7 @@ class SimpleMap extends Component {
   }
 
   renderMarkers = (map, maps) => {
+    // console.log("before",this.state.markers)
     this.state.markers.map(marker => {
       const markerObj = new maps.Marker({
         map: map,
@@ -142,6 +135,7 @@ class SimpleMap extends Component {
   }
 
   searchMap = (places) => {
+    console.log("state",this.state)
     const map = this.state.map
     const maps = this.state.maps
     pointOfInterests.forEach(function(pointOfInterest) {
@@ -186,6 +180,21 @@ class SimpleMap extends Component {
             position => {
                 console.log("Current Position:",position.coords);
                 this.setState(prevState => ({
+                    markers:
+                        [
+                          {
+                            name: "Me!",
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                            icon: "./image/markerred.png"
+                          },
+                          {
+                            name: "Future ME!!",
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude + 0.001,
+                            icon: "./image/markergreen.png"
+                          }
+                        ],
                     center: {
                         ...prevState.center,
                         lat: position.coords.latitude,
@@ -199,12 +208,8 @@ class SimpleMap extends Component {
     }
   }
 
-  componentWillUpdate(){
-    this.getGeoLocation()
-  }
-
-
   render() {
+    this.getGeoLocation()
     return (
       <div className="map-div" >
         <SearchBox onPlacesChanged={this.searchMap}/>
