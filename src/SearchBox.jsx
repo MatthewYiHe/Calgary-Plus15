@@ -4,10 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export default class SearchBox extends React.Component {
-  // static propTypes = {
-  //   placeholder: React.PropTypes.string,
-  //   onPlacesChanged: React.PropTypes.func
-  // }
+
   render() {
     return(
         <div className="searchContainer">
@@ -22,8 +19,9 @@ export default class SearchBox extends React.Component {
     }
   }
   componentDidMount() {
+    let searchBound = this.props.bounds
     var input = ReactDOM.findDOMNode(this.refs.input);
-    this.searchBox = new google.maps.places.SearchBox(input);
+    this.searchBox = new google.maps.places.SearchBox(input, searchBound);
     this.searchBox.addListener('places_changed', this.onPlacesChanged);
   }
   componentWillUnmount() {

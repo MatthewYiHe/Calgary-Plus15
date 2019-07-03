@@ -10,6 +10,8 @@ const turf = require('@turf/helpers');
 let geodesicPolyline;
 let pointOfInterests = [];
 let distance;
+// let defaultBounds;
+let searchBound;
 
 function Marker({category, lat, lng, text}){
   return (<div className="popup" >
@@ -93,7 +95,7 @@ class SimpleMap extends Component {
     }
     this.setState({ markers })
     this.renderPolylines();
-    // console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
+    console.log('lat', e.latLng.lat(), 'lng', e.latLng.lng())
   }
 
   renderMarkers = (map, maps) => {
@@ -134,6 +136,15 @@ class SimpleMap extends Component {
         }}
   }
 
+  getBounds = (places) => {
+    const { map, maps } = this.state;
+    let defaultBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(51.04450531684381, -114.07904687929152),
+      new google.maps.LatLng(51.050198081830814, -114.05770897865295)
+      );
+    searchBound = {bounds: defaultBounds}
+  }
+
   searchMap = (places) => {
     console.log("state",this.state)
     const map = this.state.map
@@ -142,13 +153,16 @@ class SimpleMap extends Component {
       pointOfInterest.setMap(null);
     });
     pointOfInterests = [];
-    var bounds = new google.maps.LatLngBounds();
+    let defaultBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(51.04450531684381, -114.07904687929152),
+      new google.maps.LatLng(51.050198081830814, -114.05770897865295)
+      );
     places.forEach(function(place) {
       if (!place.geometry) {
         console.log("Returned place contains no geometry");
         return;
       }
-      var icon = {
+      let icon = {
         url: place.icon,
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
@@ -166,12 +180,12 @@ class SimpleMap extends Component {
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
+        defaultBounds.union(place.geometry.viewport);
       } else {
-        bounds.extend(place.geometry.location);
+        defaultBounds.extend(place.geometry.location);
       }
     });
-    map.fitBounds(bounds);
+    map.fitBounds(defaultBounds);
   }
 
   getGeoLocation = () => {
@@ -210,9 +224,10 @@ class SimpleMap extends Component {
 
   render() {
     this.getGeoLocation()
+    this.getBounds()
     return (
       <div className="map-div" >
-        <SearchBox onPlacesChanged={this.searchMap}/>
+        <SearchBox onPlacesChanged={this.searchMap} bounds={searchBound} />
         <GoogleMapReact
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
           center={this.state.center}
