@@ -6,7 +6,11 @@ import Distance from './Distance.jsx';
 
 const turf = require('@turf/helpers');
 
-// <img className="icon" src={`/public/icons/${category}.png`} onClick={() => alert (text)}/>
+
+let geodesicPolyline;
+let pointOfInterests = [];
+let distance;
+
 function Marker({category, lat, lng, text}){
   return (<div className="popup" >
             <img className="icon"
@@ -15,16 +19,6 @@ function Marker({category, lat, lng, text}){
             <span className="popuptext">{text}</span>
           </div>)
 }
-// onClick={() => alert (text)}
-// function myFunction() {
-//   var popup = document.getElementById("myPopup");
-//   console.log(popup)
-//   // popup.classList.toggle("show");
-// }
-
-let geodesicPolyline;
-let pointOfInterests = [];
-let distance;
 
 class SimpleMap extends Component {
   constructor(props) {
@@ -44,7 +38,12 @@ class SimpleMap extends Component {
                       icon: "./image/markergreen.png"
                     }
                   ],
-                  places: []
+                  places: [],
+                  center: {
+                    lat: 51.04772950425881,
+                    lng: -114.06795769929886
+                  },
+                  zoom: 16
     };
 
   }
@@ -74,13 +73,13 @@ class SimpleMap extends Component {
     })
   }
 
-  static defaultProps = {
-    center: {
-      lat: 51.04772950425881,
-      lng: -114.06795769929886
-    },
-    zoom: 16
-  };
+  // static defaultProps = {
+  //   center: {
+  //     lat: 51.04772950425881,
+  //     lng: -114.06795769929886
+  //   },
+  //   zoom: 16
+  // };
 
   setMapReference = (map,maps) => this.setState({ map: map, maps: maps });
 
@@ -181,18 +180,41 @@ class SimpleMap extends Component {
     map.fitBounds(bounds);
   }
 
+  getGeoLocation = () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                console.log("Current Position:",position.coords);
+                this.setState(prevState => ({
+                    center: {
+                        ...prevState.center,
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    }
+                }))
+            }
+        )
+    } else {
+        error => console.log(error)
+    }
+  }
+
+  componentWillUpdate(){
+    this.getGeoLocation()
+  }
+
+
   render() {
     return (
       <div className="map-div" >
         <SearchBox onPlacesChanged={this.searchMap}/>
         <GoogleMapReact
           bootstrapURLKeys={{ key:"AIzaSyCiU-c0OVTdlXbAj-24y8WY-09OB89AvGA"}}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          center={this.state.center}
+          defaultZoom={this.state.zoom}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({map, maps}) => {
             // (new maps.KmlLayer("https://data.calgary.ca/api/geospatial/kp44-4n8q?method=export&format=KMZ")).setMap(map)
-            // (new google.maps.KmlLayer("https://github.com/MatthewYiHe/Plus-Fifteen-App/blob/master/Tims.kmz?raw=true")).setMap(map)
             map.data.loadGeoJson('./Plus15.geojson')
             map.data.setStyle({
               fillColor: '#2254a3',
