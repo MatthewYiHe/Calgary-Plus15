@@ -8,6 +8,7 @@ const turf = require('@turf/helpers');
 
 
 let geodesicPolyline;
+let markersArr = [];
 let pointOfInterests = [];
 let distance;
 // let defaultBounds;
@@ -17,27 +18,30 @@ function Marker({category, lat, lng, text}){
   return (<div className="popup" >
             <img className="icon"
                  src={`/public/icons/${category}.png`}
+                 onClick={() => window.helloComponent.changeRoute(lat, lng)}
                  />
             <span className="popuptext">{text}</span>
           </div>)
 }
 
+
 class SimpleMap extends Component {
   constructor(props) {
     super(props);
+    window.helloComponent = this; // set helloComponent so "this" can be accessed outside of the class
     this.state = {
                   markers: [
                     {
                       name: "Me!",
+                      icon: "./image/markerred.png",
                       lat: 51.04496400154897,
-                      lng: -114.06487584114075,
-                      icon: "./image/markerred.png"
+                      lng: -114.06487584114075
                     },
                     {
                       name: "Future ME!!",
+                      icon: "./image/markergreen.png",
                       lat: 51.04496400154897,
-                      lng: -114.06389776277542,
-                      icon: "./image/markergreen.png"
+                      lng: -114.06389776277542
                     }
                   ],
                   places: [],
@@ -47,8 +51,21 @@ class SimpleMap extends Component {
                   },
                   zoom: 16
     };
-
   }
+
+  changeRoute (lat, lng){
+    const { map, maps } = this.state;
+
+    this.state.markers[1].lat = lat
+    this.state.markers[1].lng = lng
+    this.state.markers[1].icon = "./image/markergreen.png"
+    this.state.markers[0].icon = "./image/markerred.png"
+    this.forceUpdate()
+
+    this.renderMarkers(map, maps)
+    this.renderPolylines(map, maps)
+  }
+
 
   componentWillReceiveProps = (props) => {
     console.log('selectedCategories', props.selectedCategories)
@@ -99,15 +116,22 @@ class SimpleMap extends Component {
   }
 
   renderMarkers = (map, maps) => {
-    // console.log("before",this.state.markers)
+    console.log("markerObj",markersArr)
+
+    if (markersArr.length) {
+      for (var i = 0; i < markersArr.length; i++) {
+        markersArr[i].setMap(null);
+      }
+    }
     this.state.markers.map(marker => {
-      const markerObj = new maps.Marker({
+      let markerObj = new maps.Marker({
         map: map,
         draggable: true,
         position: { lat: marker.lat, lng: marker.lng },
         title: marker.name,
         icon: marker.icon
       });
+      markersArr.push(markerObj)
       markerObj.addListener('dragend', this.handleDragEnd(marker.name))
     })
   }
@@ -115,10 +139,13 @@ class SimpleMap extends Component {
 
   renderPolylines = () => {
     const { map, maps } = this.state;
+    if (geodesicPolyline) {
+      geodesicPolyline.setMap(null)
+    }
     //set distance to null, so Distance component will have distance as a false value if there no route
     this.setState({ distance: null})
       if (map && maps) {
-        const route = pathFinder.findPath(
+        let route = pathFinder.findPath(
         nearestPoint(turf.point([this.state.markers[0].lng, this.state.markers[0].lat])),
         nearestPoint(turf.point([this.state.markers[1].lng, this.state.markers[1].lat]))
         )

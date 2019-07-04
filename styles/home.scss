@@ -120,32 +120,41 @@ body {
 /*mobile*/
 @media only screen and (max-width: 600px) {
   .container {
-    flex-direction: column;
+   flex-direction: column;
   }
 
   .map-div {
-    height: 100vh;
-    width: 100%;
-    border-bottom: 4px solid white;
+   height: 70vh;
+   width: 100%;
+   border-bottom: 4px solid white;
+  }
+
+  .nav-button {
+   text-align: center;
   }
 
   .nav {
-    float: none;
-    width: 100%;
+   float: none;
+   width: 100%;
   }
 
   .plus-15 {
-    display: none;
+   display: none;
   }
 
   .searchContainer {
-    left: calc(50% - 20%);
+   left: calc(50% - 20%);
   }
 
   .distance {
-    width: 100%;
+   width: 100%;
+   top: 0;
+   bottom: 97%;
+  }
+
+  .button-icon {
+   align-items: center;
+   width: 5%;
+   height: 5%;
   }
 }
-
-
-
