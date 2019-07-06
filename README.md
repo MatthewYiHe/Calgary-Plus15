@@ -1,19 +1,18 @@
-React Boilerplate
-=====================
+# Calgary +15
 
-A minimal and light dev environment for ReactJS.
+Navigation app to help users find their way through +15.
 
-### Usage
+## Find your way
+If location services are on, the red marker will be showing your current location. Move the green marker to find the shortest way to your destination. Read the distance and time at the bottom of the map.
+![image_1](https://github.com/jgrimshaw/Plus-Fifteen-App/blob/readme.md/docs/image_1.png?raw=true)
 
-Clone the boilerplate and create your own git repo.
+## Find places inside the +15 by using tabs on the right.
+![image_2](https://github.com/jgrimshaw/Plus-Fifteen-App/blob/readme.md/docs/image_2.png?raw=true)
 
-```
-git clone git@github.com:lighthouse-labs/react-simple-boilerplate.git
-cd react-simple-boilerplate
-git remote rm origin
-git remote add origin [YOUR NEW REPOSITORY]
-# Manually update your package.json file
-```
+## Use google search bar to find places nearby.
+![image_3](https://github.com/jgrimshaw/Plus-Fifteen-App/blob/readme.md/docs/image_3.png?raw=true)
+
+### Getting Started
 
 Install the dependencies and start the server.
 
@@ -22,24 +21,33 @@ npm install
 npm start
 open http://localhost:3000
 ```
-
-### Static Files
-
-You can store static files like images, fonts, etc in the `build` folder.
-
-For example, if you copy a file called my_image.png into the build folder you can access it using `http://localhost:3000/build/my_image.png`.
-
-### Linting
-
-This boilerplate project includes React ESLint configuration.
-
-```
-npm run lint
-```
-
 ### Dependencies
+``` @turf/explode 5.1.5
+    @turf/helpers 6.1.4
+    @turf/nearest-point 6.0.1
+    @turf/polygon-to-line 6.0.3
+    @turf/turf 5.1.6
+    geojson-path-finder 1.5.2
+    google-map-react 1.1.4
+    json-loader 0.5.7
+    prop-types 15.7.2
+    react 16.8.6
+    react-dom 16.8.6
+```
 
-* React
-* Webpack
-* [babel-loader](https://github.com/babel/babel-loader)
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+### devDependencies
+``` babel-core 6.23.1
+    babel-loader 6.3.1
+    babel-preset-es2015 6.22.0
+    babel-preset-react 6.23.0
+    babel-preset-stage-0 6.22.0
+    css-loader 0.26.1
+    eslint 3.15.0
+    eslint-plugin-react 6.9.0
+    node-sass 4.5.0
+    sass-loader 6.0.0
+    sockjs-client 1.1.2
+    style-loader 0.13.1
+    webpack 2.2.1
+    webpack-dev-server "2.3.0
+```
