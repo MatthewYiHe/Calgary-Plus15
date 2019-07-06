@@ -1,6 +1,6 @@
 # Calgary +15
 
-Navigation app to help users find their way through +15.
+Navigation app to help users find their way through +15. Built with ReactJS and google API.
 
 ## Find your way
 If location services are on, the red marker will be showing your current location. Move the green marker to find the shortest way to your destination. Read the distance and time at the bottom of the map.
