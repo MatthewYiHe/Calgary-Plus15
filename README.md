@@ -2,7 +2,15 @@
 
 Navigation app to help users find their way through +15.
 
-![image]()
+## Find your way
+If location services are on, the red marker will be showing your current location. Move the green marker to find the shortest way to your destination. Read the distance and time at the bottom of the map.
+![image_1]()
+
+## Find places inside the +15 by using tabs on the right.
+![image_2]()
+
+## Use google search bar to find places nearby.
+![image_3]()
 
 ### Getting Started
 
